@@ -1,0 +1,11 @@
+<%= render 'shared/navbar' %>
+
+<div class="card-trip">
+
+  <% @packages.each do |package| %>
+  <div class="card-trip-infos">
+    <%= link_to package.name, package_path(package) %>
+    <%= package.price %>
+  </div>
+  <% end %>
+</div>
